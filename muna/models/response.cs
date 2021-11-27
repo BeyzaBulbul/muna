@@ -8,7 +8,11 @@ namespace muna.models
 {
     public class response
     {
-        public data data { get; set; }
+        public response()
+        {
+            //this.data = new data();
+        }
+        public List<user>  data { get; set; }
         public meta meta { get; set; }
 
     }

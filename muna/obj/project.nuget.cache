@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4j3LrlFGYptFda0s7vvWksgwHaVSmlU8vQAsbjMDCXYZvoFKsLE2CntJvZYdJrm65Vt9N/v9E+xJjIVK2Y0oyg==",
+  "dgSpecHash": "YvnKM977GbdBFtp/F4av3OhJrnIYbQEH0TyCA5JK1Tmutrxu305D6n3JGo9M5cKv3KM8gRS+uVjOqTD/B+Vm5Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\acer\\Documents\\myProjects\\muna\\muna\\muna.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\acer\\.nuget\\packages\\restsharp\\106.13.0\\restsharp.106.13.0.nupkg.sha512"
+  ],
   "logs": []
 }

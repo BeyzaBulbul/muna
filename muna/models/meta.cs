@@ -8,6 +8,6 @@ namespace muna.models
 {
     public class meta
     {
-        public pegination pegination { get; set; }
+        public pagination pagination { get; set; }
     }
 }

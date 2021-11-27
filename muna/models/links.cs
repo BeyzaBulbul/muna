@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace muna.models
 {
-    internal class links
+    public class links
     {
         public string previous { get; set; }
         public string current { get; set; }

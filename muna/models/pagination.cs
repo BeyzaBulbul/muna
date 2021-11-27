@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace muna.models
 {
-    public class pegination
+    public class pagination
     {
         /*"total": 2727,
             "pages": 137,
