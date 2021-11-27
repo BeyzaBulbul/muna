@@ -1,0 +1,17 @@
+C:\Users\acer\Documents\myProjects\muna\muna\bin\Debug\net6.0-windows\muna.exe
+C:\Users\acer\Documents\myProjects\muna\muna\bin\Debug\net6.0-windows\muna.deps.json
+C:\Users\acer\Documents\myProjects\muna\muna\bin\Debug\net6.0-windows\muna.runtimeconfig.json
+C:\Users\acer\Documents\myProjects\muna\muna\bin\Debug\net6.0-windows\muna.dll
+C:\Users\acer\Documents\myProjects\muna\muna\bin\Debug\net6.0-windows\ref\muna.dll
+C:\Users\acer\Documents\myProjects\muna\muna\bin\Debug\net6.0-windows\muna.pdb
+C:\Users\acer\Documents\myProjects\muna\muna\obj\Debug\net6.0-windows\muna.csproj.AssemblyReference.cache
+C:\Users\acer\Documents\myProjects\muna\muna\obj\Debug\net6.0-windows\muna.MainForm.resources
+C:\Users\acer\Documents\myProjects\muna\muna\obj\Debug\net6.0-windows\muna.csproj.GenerateResource.cache
+C:\Users\acer\Documents\myProjects\muna\muna\obj\Debug\net6.0-windows\muna.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\acer\Documents\myProjects\muna\muna\obj\Debug\net6.0-windows\muna.AssemblyInfoInputs.cache
+C:\Users\acer\Documents\myProjects\muna\muna\obj\Debug\net6.0-windows\muna.AssemblyInfo.cs
+C:\Users\acer\Documents\myProjects\muna\muna\obj\Debug\net6.0-windows\muna.csproj.CoreCompileInputs.cache
+C:\Users\acer\Documents\myProjects\muna\muna\obj\Debug\net6.0-windows\muna.dll
+C:\Users\acer\Documents\myProjects\muna\muna\obj\Debug\net6.0-windows\ref\muna.dll
+C:\Users\acer\Documents\myProjects\muna\muna\obj\Debug\net6.0-windows\muna.pdb
+C:\Users\acer\Documents\myProjects\muna\muna\obj\Debug\net6.0-windows\muna.genruntimeconfig.cache
