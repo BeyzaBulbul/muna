@@ -55,6 +55,11 @@ namespace muna
         {
           this.selectedUser =  dgvUsers.SelectedRows[0].DataBoundItem as user;
             this.txtId.Text = this.selectedUser.id.ToString();
+            this.txtName.Text = this.selectedUser.name.ToString();
+            this.txtEmail.Text = this.selectedUser.email.ToString();
+            this.txtGender.Text = this.selectedUser.gender.ToString();
+            this.txtStatus.Text = this.selectedUser.status.ToString();
+
         }
     }
 }
