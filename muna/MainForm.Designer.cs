@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,6 +52,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnDelete);
+            this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtId);
             this.panel1.Controls.Add(this.label4);
@@ -66,6 +70,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(22, 427);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 12;
+            this.btnDelete.Text = "SİL";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Location = new System.Drawing.Point(22, 393);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 11;
+            this.btnUpdate.Text = "GÜNCELLE";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label5
             // 
@@ -149,7 +173,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(22, 396);
+            this.btnSave.Location = new System.Drawing.Point(22, 350);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 0;
@@ -224,5 +248,8 @@
         private Button btnSave;
         private Label label5;
         private TextBox txtId;
+        private Button btnUpdate;
+        private Button btnDelete;
+        private EventHandler txtId_TextChanged;
     }
 }

@@ -8,6 +8,6 @@ namespace muna.models
 {
     public class responsePostUser
     {
-        public user data { get; set; }
+        public user data { get; set; } //responseları ayırmamızın sebebi kullanıcıları hem kaydediyor hem sonrasında listeliyor oluşumuz
     }
 }
