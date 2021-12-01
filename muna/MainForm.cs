@@ -91,8 +91,26 @@ namespace muna
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
-        {   
+        {
             //silme yapýlacak
+
+            int id = Convert.ToInt32(txtId.Text);
+            user user = new user();
+            user.id = id;
+
+
+            if (id != null && id > 0)
+            {
+                user delUser = baseRepository.deleteUser(user);
+                if(delUser.id != null)
+                {
+                    MessageBox.Show("Kullanýcý silinemedi!");
+                }
+                else
+                {
+                    MessageBox.Show("Kullanýcý silindi!");
+                }
+            }
 
         }
     }

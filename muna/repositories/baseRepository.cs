@@ -44,7 +44,7 @@ namespace muna.repositories
             
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
 
             return savedUser;
@@ -70,7 +70,7 @@ namespace muna.repositories
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show(ex.ToString());
             }
 
             return updateUser;
@@ -78,8 +78,20 @@ namespace muna.repositories
         public user deleteUser (user user)
         {
             user delUser = new user();
-
-
+            try
+            {
+                var client = new RestClient("https://gorest.co.in/public/v1/users/" +user.id+"");
+                client.Timeout = -1;
+                var request = new RestRequest(Method.DELETE);
+                request.AddHeader("Content-Type", "application/json");
+                request.AddHeader("Authorization", "Bearer 539ab1b71b2e0ec43ba9e2853bc8c53ee3e923abbd829e003a78787ff509af82");
+                IRestResponse response = client.Execute(request);
+                Console.WriteLine(response.Content);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
             return delUser; 
 
         }
