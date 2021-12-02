@@ -6,6 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using Microsoft.Build.Framework;
+using Dapper;
 
 namespace muna.repositories
 {
@@ -94,6 +97,35 @@ namespace muna.repositories
             }
             return delUser; 
 
+        }
+
+        public void DapperInsert(List<user> AktarilacakListe)
+        {
+            try
+            {
+                SqlConnectionStringBuilder myConn = new SqlConnectionStringBuilder
+                {
+                    InitialCatalog = "json_veri",
+                    DataSource = ".",
+                    UserID="sa",
+                    Password=""
+                };
+
+                using (SqlConnection sqlConnect = new SqlConnection(myConn.ConnectionString))
+                {
+                    foreach (user satir in AktarilacakListe)
+                    {
+                        sqlConnect.Query<user>(@"INSERT INTO [dbo].[TBL_JSON_VERİ]([id],[name],[email],[gender],[status])
+                                                                             VALUES(@id, @name, @email, @gender, @status)", satir);
+                    }
+                }
+                MessageBox.Show("Aktarma yapıldı!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
     }

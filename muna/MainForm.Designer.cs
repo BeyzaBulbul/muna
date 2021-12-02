@@ -45,6 +45,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnDBKaydet = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
@@ -52,6 +53,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnDBKaydet);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.label5);
@@ -212,6 +214,16 @@
             this.panel3.Size = new System.Drawing.Size(600, 100);
             this.panel3.TabIndex = 2;
             // 
+            // btnDBKaydet
+            // 
+            this.btnDBKaydet.Location = new System.Drawing.Point(119, 350);
+            this.btnDBKaydet.Name = "btnDBKaydet";
+            this.btnDBKaydet.Size = new System.Drawing.Size(75, 56);
+            this.btnDBKaydet.TabIndex = 13;
+            this.btnDBKaydet.Text = "VERİ TABANINA AKTAR";
+            this.btnDBKaydet.UseVisualStyleBackColor = true;
+            this.btnDBKaydet.Click += new System.EventHandler(this.btnDBKaydet_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -221,7 +233,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "JSON VERİ";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -251,5 +263,6 @@
         private Button btnUpdate;
         private Button btnDelete;
         private EventHandler txtId_TextChanged;
+        private Button btnDBKaydet;
     }
 }

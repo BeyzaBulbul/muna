@@ -113,5 +113,15 @@ namespace muna
             }
 
         }
+
+        private void btnDBKaydet_Click(object sender, EventArgs e)
+        {
+            response response = baseRepository.getUsers();
+            List<user> aktarilanVeri = response.data;
+
+            if (aktarilanVeri.Count > 0)
+                baseRepository.DapperInsert(aktarilanVeri);
+
+        }
     }
 }
