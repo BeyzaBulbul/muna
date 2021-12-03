@@ -37,14 +37,8 @@ namespace muna
                 if (savedUser != null && savedUser.id != null)
                 {
                     txtId.Text = savedUser.id.ToString();
-
                     user.id = savedUser.id;
-                    DialogResult secenek = MessageBox.Show("Kullanýcý oluþturuldu veri tabanýna da eklensinmi?", "Uyarý", MessageBoxButtons.OKCancel);
-                    
-                    if(secenek == DialogResult.OK)
-                    {
                         baseRepository.dbInsert(user);
-                    }
                 }
                 else
                 {
@@ -86,6 +80,7 @@ namespace muna
                 if (putUser != null && putUser.id != null)
                 {
                     txtId.Text = putUser.id.ToString();
+                    baseRepository.dbUpdate(user);
                     MessageBox.Show("Kullanýcý güncellendi!");
                 }
                 else

@@ -115,8 +115,7 @@ namespace muna.repositories
                 {
                     foreach (user satir in AktarilacakListe)
                     {
-                        sqlConnect.Query<user>(@"INSERT INTO [dbo].[TBL_JSON_VERİ]([id],[name],[email],[gender],[status])
-                                                                             VALUES(@id, @name, @email, @gender, @status)", satir);
+                        sqlConnect.Query<user>(@"INSERT INTO [dbo].[TBL_JSON_VERİ]([id],[name],[email],[gender],[status])VALUES(@id, @name, @email, @gender, @status)", satir);
                     }
                 }
                 MessageBox.Show("Aktarma yapıldı!");
@@ -143,7 +142,6 @@ namespace muna.repositories
                 {
                     string insertVeri = @"INSERT INTO [dbo].[TBL_JSON_VERİ]([id], [name], [email], [gender], [status]) VALUES (@id, @name, @email, @gender, @status)";
                     var result = sqlConnect.Execute(insertVeri, new {user.id,user.name,user.email,user.gender,user.status});
-
                 }
                 MessageBox.Show("Veri tabanına eklendi!");
             }
@@ -168,13 +166,37 @@ namespace muna.repositories
 
                 using (SqlConnection sqlConnect = new SqlConnection(myConn.ConnectionString))
                 {
-                    string deleteQuery = @"DELETE FROM [dbo].[TBL_JSON_VERİ] WHERE id = @id";
+                    string deleteVeri = @"DELETE FROM [dbo].[TBL_JSON_VERİ] WHERE id = @id";
 
-                    var result = sqlConnect.Execute(deleteQuery, new
-                    {
-                        user.id
-                    });
+                    var result = sqlConnect.Execute(deleteVeri, new
+                    {user.id});
 
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+        public void dbUpdate(user user)
+        {
+            try
+            {
+                SqlConnectionStringBuilder myConn = new SqlConnectionStringBuilder
+                {
+                    InitialCatalog = "json_veri",
+                    DataSource = ".",
+                    UserID = "sa",
+                    Password = ""
+                };
+
+                using (SqlConnection sqlConnect = new SqlConnection(myConn.ConnectionString))
+                {
+                    string updateVeri = @"UPDATE [dbo].[TBL_JSON_VERİ] SET name = @name, email = @email, gender = @gender, status = @status WHERE id = @id";
+
+                    var result = sqlConnect.Execute(updateVeri, new
+                    {user.id,user.name,user.email,user.gender,user.status});
                 }
             }
             catch (Exception ex)
