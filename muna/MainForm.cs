@@ -37,7 +37,14 @@ namespace muna
                 if (savedUser != null && savedUser.id != null)
                 {
                     txtId.Text = savedUser.id.ToString();
-                    MessageBox.Show("Kullanýcý oluþturuldu");
+
+                    user.id = savedUser.id;
+                    DialogResult secenek = MessageBox.Show("Kullanýcý oluþturuldu veri tabanýna da eklensinmi?", "Uyarý", MessageBoxButtons.OKCancel);
+                    
+                    if(secenek == DialogResult.OK)
+                    {
+                        baseRepository.dbInsert(user);
+                    }
                 }
                 else
                 {
@@ -115,7 +122,7 @@ namespace muna
         }
 
         private void btnDBKaydet_Click(object sender, EventArgs e)
-        {
+        { //listedeki kullanýcýlarý veritabanýna aktaracak
             response response = baseRepository.getUsers();
             List<user> aktarilanVeri = response.data;
 

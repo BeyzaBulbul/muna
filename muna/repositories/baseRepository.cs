@@ -124,6 +124,39 @@ namespace muna.repositories
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }  
+        }
+        public void dbInsert(user user)
+        {
+            try
+            {
+                SqlConnectionStringBuilder myConn = new SqlConnectionStringBuilder
+                {
+                    InitialCatalog = "json_veri",
+                    DataSource = ".",
+                    UserID = "sa",
+                    Password = ""
+                };
+
+                using (SqlConnection sqlConnect = new SqlConnection(myConn.ConnectionString))
+                {
+                    string insertQuery = @"INSERT INTO [dbo].[TBL_JSON_VERİ]([id], [name], [email], [gender], [status]) VALUES (@id, @name, @email, @gender, @status)";
+                    var result = sqlConnect.Execute(insertQuery, new
+                    {
+                        user.id,
+                        user.name,
+                        user.email,
+                        user.gender,
+                        user.status
+                    });
+
+                }
+                MessageBox.Show("Veri tabanına eklendi!");
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
             
         }
