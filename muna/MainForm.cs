@@ -81,7 +81,6 @@ namespace muna
             user.id=id;
             if (id != null && id > 0)
             {
-                
                 user putUser = baseRepository.putUser(user);
 
                 if (putUser != null && putUser.id != null)
@@ -93,7 +92,6 @@ namespace muna
                 {
                     MessageBox.Show("Kullanýcý güncellenemedi!");
                 }
-
             }
         }
 
@@ -115,6 +113,7 @@ namespace muna
                 }
                 else
                 {
+                    baseRepository.dbDelete(user);
                     MessageBox.Show("Kullanýcý silindi!");
                 }
             }
